@@ -362,7 +362,12 @@
           Go ahead and open up your <p class="font-weight-bold" style="color: #32c850; display: inline;">output.tf</p> file.
           <br><br>
 <div class="highlight"><pre class="syntax-highlight shell"><code>vim output.tf
-</code></pre></div>          And add this content:
+</code></pre></div>          And add this content: Terraform 0.10, 0.11
+          <br><br>
+<div class="highlight"><pre class="syntax-highlight ruby"><code><span class="n">output</span> <span class="s2">"public_dns"</span> <span class="p">{</span>
+  <span class="n">value</span> <span class="o">=</span> <span class="s2">"${aws_instance.example.public_dns}"</span>
+<span class="p">}</span>
+</code></pre></div>          Terraform 0.12
           <br><br>
 <div class="highlight"><pre class="syntax-highlight ruby"><code><span class="n">output</span> <span class="s2">"public_dns"</span> <span class="p">{</span>
   <span class="n">value</span> <span class="o">=</span> <span class="s2">aws_instance.example.public_dns</span>

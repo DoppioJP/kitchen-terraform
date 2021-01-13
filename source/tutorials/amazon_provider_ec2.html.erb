@@ -355,11 +355,18 @@ instance_type = "m3.medium"
           <% code("bash") do %>
 vim output.tf
           <% end %>
-          And add this content:
+          And add this content: Terraform 0.10, 0.11
           <br><br>
           <% code("ruby") do %>
 output "public_dns" {
   value = "${aws_instance.example.public_dns}"
+}
+          <% end %>
+          Terraform 0.12
+          <br><br>
+          <% code("ruby") do %>
+output "public_dns" {
+  value = aws_instance.example.public_dns
 }
           <% end %>
           Ok! Now we're ready to finally create some Test Kitchen instances!
